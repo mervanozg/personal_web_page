@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technologies - Mervan Özgönül</title>
+    <title>Projects - Mervan Özgönül</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Hero section'ı tam ortalamak için ek stiller */
         .centered-hero {
             min-height: 100vh;
             display: flex;
@@ -23,7 +22,7 @@
         }
         
         .centered-hero-content {
-            max-width: 800px;
+            max-width: 850px;
             padding: 2rem;
         }
         
@@ -47,7 +46,6 @@
             justify-content: center;
         }
         
-        /* Responsive düzenlemeler */
         @media (max-width: 768px) {
             .centered-hero .hero-title {
                 font-size: 3rem;
@@ -93,7 +91,7 @@
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="background.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="technologies.html" class="nav-link active">Technologies</a></li>
+                <li class="nav-item"><a href="technologies.html" class="nav-link active">Projects</a></li>
                 <li class="nav-item"><a href="company.html" class="nav-link">MERYKSI CO.</a></li>
             </ul>
 
@@ -106,88 +104,178 @@
         </div>
     </nav>
 
-    <!-- ORTALANMIŞ Hero Section -->
     <section class="centered-hero">
         <div class="centered-hero-content">
-            <h1 class="hero-title">Technologies & <span class="highlight">Skills</span></h1>
-            <p class="hero-subtitle">Mastering the tools that shape the future of geospatial technology</p>
-            <p class="hero-description">Explore my technical expertise in GIS, programming, and cutting-edge technologies that drive innovation in geomatics engineering and digital solutions.</p>
+            <h1 class="hero-title">Projects & <span class="highlight">Portfolio</span></h1>
+            <p class="hero-subtitle">Geospatial AI, High-Concurrency SaaS & 3D Digital Twin Engineering</p>
+            <p class="hero-description">Explore my technical projects combining deep learning computer vision for satellite imagery, scalable full-stack web architectures, and sub-centimeter UAV photogrammetry.</p>
             <div class="hero-buttons">
-                <a href="#technologies" class="btn btn-primary">
-                    <i class="fas fa-code"></i>
-                    View Technologies
+                <a href="#projects-section" class="btn btn-primary">
+                    <i class="fas fa-project-diagram"></i>
+                    Explore Projects
                 </a>
             </div>
         </div>
+        <a href="#projects-section" class="scroll-down-hint" aria-label="Scroll down for more">
+            <span class="scroll-hint-text">Scroll down for more</span>
+            <span class="scroll-hint-icon"><i class="fas fa-angles-down"></i></span>
+        </a>
     </section>
 
-    <section id="technologies" class="technologies-content">
+    <section id="projects-section" class="technologies-content">
+        <h2 class="section-main-title">📊 Projects & Technical Overview</h2>
+        <p class="section-subtitle" style="text-align: center;">Summary comparison of my core engineering and geospatial software projects</p>
+
+        <!-- Tabular Information with Images -->
         <div class="tech-table-container">
             <table class="tech-table">
                 <thead>
                     <tr>
-                        <th>Technology</th>
-                        <th>Level</th>
-                        <th>Description</th>
-                        <th>Icon</th>
+                        <th>Image</th>
+                        <th>Project Name</th>
+                        <th>Role & Domain</th>
+                        <th>Core Technologies</th>
+                        <th>Key Achievement</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>GIS Software</td>
-                        <td><span class="level intermediate">Intermediate</span></td>
-                        <td>Map analysis with ArcGIS, QGIS</td>
-                        <td class="tech-icon">🗺️</td>
+                        <td class="tech-icon"><img src="assets/icons/road_ai.svg" alt="Satellite Road Extraction Icon" class="tech-table-img"></td>
+                        <td><strong>AI-Powered Georeferenced Road Extraction</strong></td>
+                        <td><span class="level badge-blue">Lead Developer • GeoAI</span></td>
+                        <td>PyTorch (SMP U-Net), FastAPI, React, TypeScript, Rasterio (GDAL), OpenCV</td>
+                        <td><strong>84.3% IoU</strong> pixel-level road extraction from 1GB+ GeoTIFF satellite imagery with interactive Dijkstra/A* repair</td>
                     </tr>
                     <tr>
-                        <td>Photogrammetry</td>
-                        <td><span class="level intermediate">Intermediate</span></td>
-                        <td>3D modeling with UAV data</td>
-                        <td class="tech-icon">📷</td>
+                        <td class="tech-icon"><img src="assets/icons/rezit.svg" alt="REZIT SaaS Platform Icon" class="tech-table-img"></td>
+                        <td><strong>REZIT – SaaS Reservation Platform</strong></td>
+                        <td><span class="level badge-purple">Founder & Lead Dev • SaaS</span></td>
+                        <td>Node.js, Express.js, PostgreSQL, React.js, SVG/HTML5 Canvas, JWT</td>
+                        <td><strong>500+ req/sec</strong> concurrency, ACID pessimistic row-locking & interactive affine seat mapping (<a href="https://rezit.app" target="_blank">rezit.app</a>)</td>
                     </tr>
                     <tr>
-                        <td>Python</td>
-                        <td><span class="level intermediate">Intermediate</span></td>
-                        <td>Data analysis and automation</td>
-                        <td class="tech-icon">🐍</td>
+                        <td class="tech-icon"><img src="assets/icons/gordion.svg" alt="Gordion Digital Twin Icon" class="tech-table-img"></td>
+                        <td><strong>Gordion Ancient City 3D Digital Twin</strong></td>
+                        <td><span class="level intermediate">Field Survey Assistant • 3D GIS</span></td>
+                        <td>GNSS / GPS Field Surveys, UAV Data Acquisition, Indoor LiDAR Scanning</td>
+                        <td>Active field participation in <strong>GPS measurements</strong>, drone flights & museum indoor <strong>LiDAR scanning</strong> (<a href="https://dijitalikiz.hkmo.org.tr/" target="_blank">dijitalikiz.hkmo.org.tr</a>)</td>
                     </tr>
                     <tr>
-                        <td>HTML/CSS/JavaScript</td>
-                        <td><span class="level intermediate">Intermediate</span></td>
-                        <td>Web development fundamentals</td>
-                        <td class="tech-icon">💻</td>
+                        <td class="tech-icon"><img src="assets/icons/gis.svg" alt="Izmir Emergency Web GIS Icon" class="tech-table-img"></td>
+                        <td><strong>İzmir Disaster Gathering Areas Web GIS</strong></td>
+                        <td><span class="level badge-green">Researcher • Web GIS</span></td>
+                        <td>Web GIS, Spatial Network & Accessibility Analysis, QGIS, ArcGIS</td>
+                        <td>Presented internationally at the <strong>35th IGSM</strong> in Valencia, Spain</td>
                     </tr>
                     <tr>
-                        <td>AI & ChatGPT</td>
-                        <td><span class="level intermediate">Intermediate</span></td>
-                        <td>Prompt engineering and AI design</td>
-                        <td class="tech-icon">🤖</td>
-                    </tr>
-                    <tr>
-                        <td>E-commerce</td>
-                        <td><span class="level intermediate">Intermediate</span></td>
-                        <td>Etsy, Print-on-Demand</td>
-                        <td class="tech-icon">🛒</td>
+                        <td class="tech-icon"><img src="assets/icons/ecommerce.svg" alt="MERYKSI E-commerce Icon" class="tech-table-img"></td>
+                        <td><strong>MERYKSI CO. – AI Print-on-Demand</strong></td>
+                        <td><span class="level badge-pink">Founder • E-Commerce</span></td>
+                        <td>Generative AI Design, Etsy SEO Analytics, Printify Automation</td>
+                        <td><strong>94+ global sales</strong> across 70+ cities and 3 continents</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
+        <!-- Detailed Project Cards -->
         <div class="learning-section">
-            <h2>Technologies I Want to Learn</h2>
-            <div class="learning-grid">
-                <div class="learning-card">
-                    <h3>WebGL & 3D Mapping</h3>
-                    <p>Interactive 3D map applications</p>
+            <h2>🚀 Featured Engineering Projects</h2>
+            <div class="project-cards-grid">
+
+                <!-- Project 1: Satellite Road Extraction -->
+                <div class="learning-card project-detail-card">
+                    <div class="project-card-header">
+                        <img src="assets/icons/road_ai.svg" alt="AI Road Extraction" class="project-card-icon">
+                        <div>
+                            <span class="project-role-tag">Lead Developer • Geospatial AI & Computer Vision</span>
+                            <h3>AI-Powered Georeferenced Road Extraction & Interactive Editing Platform</h3>
+                        </div>
+                    </div>
+                    <p class="project-summary">
+                        An end-to-end geospatial artificial intelligence platform that automatically extracts pixel-level road networks from high-resolution satellite imagery and enables real-time interactive topological repair.
+                    </p>
+                    <ul class="project-highlights">
+                        <li><strong>End-to-End GeoAI Segmentation:</strong> Trained a multi-encoder (EfficientNet-B3 / ResNet50) U-Net segmentation architecture using Segmentation Models PyTorch (SMP) with hybrid Dice + Focal loss and Albumentations, achieving an <strong>84.3% IoU score</strong>.</li>
+                        <li><strong>Interactive Road Repair & Tiling:</strong> Engineered an interactive repair module combining Test-Time Augmentation (TTA), Laplacian gradients, and <strong>Dijkstra / A* shortest-path algorithms</strong> to bridge fragmented road segments in real time. Implemented 512px overlapping sliding-window inference (stride: 128px) with probability stitching to process <strong>1GB+ GeoTIFFs</strong> without GPU OOM errors.</li>
+                        <li><strong>Lossless Georeferencing:</strong> Preserved CRS projections and Affine transformation matrices via <strong>Rasterio (GDAL)</strong> alongside an asynchronous FastAPI background task queue for seamless <strong>QGIS & ArcGIS</strong> compatibility.</li>
+                    </ul>
+                    <div class="project-tech-tags">
+                        <span>PyTorch</span>
+                        <span>SMP (U-Net)</span>
+                        <span>FastAPI</span>
+                        <span>React & TypeScript</span>
+                        <span>Rasterio / GDAL</span>
+                        <span>OpenCV</span>
+                        <span>Scikit-Image</span>
+                        <span>HTML5 Canvas</span>
+                    </div>
                 </div>
-                <div class="learning-card">
-                    <h3>Machine Learning</h3>
-                    <p>ML for geographic data analysis</p>
+
+                <!-- Project 2: REZIT -->
+                <div class="learning-card project-detail-card">
+                    <div class="project-card-header">
+                        <img src="assets/icons/rezit.svg" alt="REZIT SaaS Platform" class="project-card-icon">
+                        <div>
+                            <span class="project-role-tag">Founder & Lead Developer (2025 – Present)</span>
+                            <h3>REZIT – Next-Gen SaaS Interactive Table Reservation Platform</h3>
+                        </div>
+                    </div>
+                    <p class="project-summary">
+                        A high-concurrency SaaS reservation platform that allows customers to interactively inspect venue layouts and select their exact table before arriving at the venue.
+                    </p>
+                    <ul class="project-highlights">
+                        <li><strong>Scalable Backend Architecture:</strong> Built from scratch with Node.js, Express.js, and PostgreSQL utilizing B-Tree indexing and <code>pg-pool</code> connection pooling to reliably handle <strong>500+ concurrent requests/sec</strong> under peak load.</li>
+                        <li><strong>Transaction Safety & Interactive Floorplan Editor:</strong> Eliminated double-bookings and race conditions via ACID transactions and pessimistic row-locking (<code>SELECT FOR UPDATE</code>). Designed an interactive React template editor and <strong>SVG/HTML5 Canvas</strong> seat-mapping module powered by affine matrix transformations (smooth zoom/pan).</li>
+                        <li><strong>Enterprise Security Infrastructure:</strong> Integrated stateless JWT authentication, strict CORS policies, Express Rate-Limiter layers, and Express-Validator endpoint sanitization against SQL injection.</li>
+                    </ul>
+                    <div class="project-tech-tags">
+                        <span>Node.js</span>
+                        <span>Express.js</span>
+                        <span>PostgreSQL</span>
+                        <span>React.js</span>
+                        <span>SVG & HTML5 Canvas</span>
+                        <span>RESTful APIs</span>
+                        <span>JWT</span>
+                    </div>
+                    <div class="project-card-actions">
+                        <a href="https://rezit.app" target="_blank" class="btn btn-primary project-btn">
+                            <i class="fas fa-external-link-alt"></i> Visit rezit.app
+                        </a>
+                    </div>
                 </div>
-                <div class="learning-card">
-                    <h3>Cloud Computing</h3>
-                    <p>Cloud solutions for big data processing</p>
+
+                <!-- Project 3: Gordion Digital Twin -->
+                <div class="learning-card project-detail-card">
+                    <div class="project-card-header">
+                        <img src="assets/icons/gordion.svg" alt="Gordion Ancient City Digital Twin" class="project-card-icon">
+                        <div>
+                            <span class="project-role-tag">Field Survey Assistant • HKMO Ankara (2024)</span>
+                            <h3>Gordion Ancient City 3D Digital Twin Project</h3>
+                        </div>
+                    </div>
+                    <p class="project-summary">
+                        Actively participated in on-site geodetic field operations for the 3D digital twin documentation of the UNESCO World Heritage site Gordion Ancient City and Gordion Museum.
+                    </p>
+                    <ul class="project-highlights">
+                        <li><strong>Field GPS / GNSS Measurements:</strong> Actively took part in field work and assisted the surveying team with high-precision GPS / Ground Control Point (GCP) measurements across the archaeological site.</li>
+                        <li><strong>UAV (Drone) Flight Operations:</strong> Participated on-site during drone aerial imagery acquisition campaigns, observing and learning photogrammetric flight planning and field data collection workflows firsthand.</li>
+                        <li><strong>Indoor Terrestrial LiDAR Scanning:</strong> Present during the indoor <strong>LiDAR laser scanning</strong> of the Gordion Museum interior, gaining hands-on field familiarity with 3D point cloud acquisition and digital twin methodologies.</li>
+                    </ul>
+                    <div class="project-tech-tags">
+                        <span>GPS / GNSS Field Surveys</span>
+                        <span>UAV (Drone) Field Operations</span>
+                        <span>Indoor LiDAR Scanning</span>
+                        <span>3D Digital Twin Workflow</span>
+                        <span>Cultural Heritage Documentation</span>
+                    </div>
+                    <div class="project-card-actions">
+                        <a href="https://dijitalikiz.hkmo.org.tr/" target="_blank" class="btn btn-primary project-btn">
+                            <i class="fas fa-external-link-alt"></i> View Gordion Digital Twin (HKMO)
+                        </a>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>

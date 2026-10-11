@@ -25,7 +25,7 @@
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="background.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="technologies.html" class="nav-link">Technologies</a></li>
+                <li class="nav-item"><a href="technologies.html" class="nav-link">Projects</a></li>
                 <li class="nav-item"><a href="company.html" class="nav-link active">MERYKSI CO.</a></li>
             </ul>
 
@@ -99,12 +99,21 @@
                 </div>
             </div>
         </div>
+        <a href="#global-sales" class="scroll-down-hint" aria-label="Scroll down for more">
+            <span class="scroll-hint-text">Scroll down for more</span>
+            <span class="scroll-hint-icon"><i class="fas fa-angles-down"></i></span>
+        </a>
     </section>
 
-    <section class="global-sales-section">
+    <section id="global-sales" class="global-sales-section">
         <div class="container">
-            <h2>🌍 Our Global Reach</h2>
+            <h2>🌍 Our Global Reach (OpenLayers Map)</h2>
             <p class="section-subtitle">Sales distribution across 70+ cities worldwide</p>
+            <div class="map-Threshold-banner" id="olZoomBanner">
+                <i class="fas fa-search-plus"></i>
+                <span id="olZoomStatus">Current Zoom: 2.0 | Marker Zoom Threshold: 3.5 — Zoom in (≥ 3.5) to view sales markers!</span>
+                <button type="button" class="btn-zoom-threshold" id="olZoomBtn">Zoom to Markers</button>
+            </div>
             <div id="salesMap" class="sales-map-container"></div>
             <div class="sales-stats">
                 <div class="sales-stat">
@@ -138,6 +147,7 @@
             </div>
             <div class="step-card">
                 <div class="step-number">3</div>
+                <h3>Etsy Store & Order</h3>
                 <p>Our customers easily place orders from our Etsy shop and shop with secure payment systems.</p>
             </div>
             <div class="step-card">

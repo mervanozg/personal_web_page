@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <style>
         /* Hero section'ı tam ortalamak için ek stiller */
         .centered-hero {
@@ -93,7 +94,7 @@
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="background.html" class="nav-link active">About</a></li>
-                <li class="nav-item"><a href="technologies.html" class="nav-link">Technologies</a></li>
+                <li class="nav-item"><a href="technologies.html" class="nav-link">Projects</a></li>
                 <li class="nav-item"><a href="company.html" class="nav-link">MERYKSI CO.</a></li>
             </ul>
 
@@ -117,8 +118,16 @@
                     <i class="fas fa-user"></i>
                     Learn More About Me
                 </a>
+                <a href="#cv-section" class="btn btn-secondary">
+                    <i class="fas fa-file-pdf"></i>
+                    View & Download CV
+                </a>
             </div>
         </div>
+        <a href="#about-content" class="scroll-down-hint" aria-label="Scroll down for more">
+            <span class="scroll-hint-text">Scroll down for more</span>
+            <span class="scroll-hint-icon"><i class="fas fa-angles-down"></i></span>
+        </a>
     </section>
 
     <section id="about-content" class="about-content">
@@ -156,6 +165,46 @@
         </div>
     </section>
 
+    <!-- Leaflet Map Section: Academic & Event Locations -->
+    <section id="journey-map-section" class="global-sales-section">
+        <div class="container">
+            <h2>🗺️ My Academic & International Journey (Leaflet Map)</h2>
+            <p class="section-subtitle">Locations of my education, international geodetic meetings (IGSM), and GIS project areas</p>
+            <div class="map-Threshold-banner" id="leafletZoomBanner">
+                <i class="fas fa-search-plus"></i>
+                <span id="leafletZoomStatus">Current Zoom: 3 | Marker Zoom Threshold: 5 — Zoom in (≥ 5) to view overlapping markers!</span>
+                <button type="button" class="btn-zoom-threshold" id="leafletZoomBtn">Zoom to Markers</button>
+            </div>
+            <div id="journeyMap" class="sales-map-container"></div>
+        </div>
+    </section>
+
+    <!-- CV View & Download Section -->
+    <section id="cv-section" class="cv-section">
+        <div class="container">
+            <div class="cv-header">
+                <h2>📄 Curriculum Vitae (CV)</h2>
+                <p class="section-subtitle">You can preview my CV directly below, open it in a new tab, or download a copy as PDF.</p>
+                <div class="cv-actions">
+                    <a href="assets/Mervan_Ozgonul_CV.pdf" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-external-link-alt"></i>
+                        Open CV in New Tab
+                    </a>
+                    <a href="assets/Mervan_Ozgonul_CV.pdf" download="Mervan_Ozgonul_CV.pdf" class="btn btn-secondary">
+                        <i class="fas fa-download"></i>
+                        Download CV (PDF)
+                    </a>
+                </div>
+            </div>
+            <div class="cv-preview-wrapper">
+                <iframe src="assets/Mervan_Ozgonul_CV.pdf" class="cv-iframe" title="Mervan Özgönül CV">
+                    <p>Your browser does not support embedded PDFs. <a href="assets/Mervan_Ozgonul_CV.pdf" download>Click here to download the PDF.</a></p>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="script.js"></script>
 </body>
 </html>
