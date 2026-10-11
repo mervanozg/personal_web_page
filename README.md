@@ -2,6 +2,8 @@
 
 # GMT 458 – Web GIS | Assignment 1: Personal Web Page
 
+https://mervanozg.github.io/personal_web_page/index.html
+
 **Author:** Mervan Özgönül  
 **Department:** Geomatics Engineering, Hacettepe University
 
